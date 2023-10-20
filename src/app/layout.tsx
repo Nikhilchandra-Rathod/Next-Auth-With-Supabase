@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Toaster } from "@/components/ui/toaster";
-import { headers } from "next/headers";
+//import { headers } from "next/headers";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,8 +17,8 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const headersList = headers();
-  const host = headersList.get("host");
+  // const headersList = headers();
+  // const host = headersList.get("host");
   return (
     <html
       lang="en"
@@ -27,7 +27,6 @@ export default function RootLayout({
       <body className={`h-full overflow-hidden ${inter.className}`}>
         <Navbar />
         {children}
-        <p className="mt-20">Hello form {host}</p>
         <Toaster />
       </body>
     </html>
