@@ -1,13 +1,11 @@
-import Link from "next/link";
-import React from "react";
-import { Button, buttonVariants } from "./ui/button";
+import { getAuthSession } from "@/lib/auth";
 import { HandMetal } from "lucide-react";
-import { getServerSession } from "next-auth";
-import { authOptions } from "@/lib/auth";
+import Link from "next/link";
 import UserAccountNav from "./UserAccountNav";
+import { buttonVariants } from "./ui/button";
 
 export const Navbar = async () => {
-  const session = await getServerSession(authOptions);
+  const session = await getAuthSession();
 
   return (
     <div className="bg-slate-100 py-2 border-b border-s-zinc-200 fixed w-full z-10 top-0">
