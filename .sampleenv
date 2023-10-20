@@ -1,0 +1,2 @@
+DATABASE_URL=postrgas database url
+NEXTAUTH_SECRET=your super secret string
