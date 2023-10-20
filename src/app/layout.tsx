@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Toaster } from "@/components/ui/toaster";
+import { cn } from "@/lib/utils";
 //import { headers } from "next/headers";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -24,9 +25,9 @@ export default function RootLayout({
       lang="en"
       className="h-full w-full"
     >
-      <body className={`h-full overflow-hidden ${inter.className}`}>
+      <body className={cn(inter.className, "antialiased h-screen pt-20")}>
         <Navbar />
-        {children}
+        <div className="container mx-auto h-screen">{children}</div>
         <Toaster />
       </body>
     </html>

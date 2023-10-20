@@ -7,7 +7,7 @@ const page = async () => {
 
   if (session?.user) {
     return (
-      <h2 className="pt-20 text-2xl">
+      <h2 className="text-2xl">
         Admin page - welcome back {session.user.username}
       </h2>
     );

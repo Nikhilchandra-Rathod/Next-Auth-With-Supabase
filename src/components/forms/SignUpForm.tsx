@@ -94,9 +94,7 @@ const SignUpForm = () => {
 
   return (
     <>
-      <h2 className="text-lg font-medium">
-        Sign Up to <span className="text-primary">My Salon</span>
-      </h2>
+      <h2 className="text-lg font-medium">Sign Up</h2>
 
       <Form {...form}>
         <form

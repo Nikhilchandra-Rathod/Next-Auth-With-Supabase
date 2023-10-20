@@ -65,9 +65,7 @@ const SignInForm = () => {
 
   return (
     <>
-      <h2 className="text-lg font-medium">
-        Sign In to <span className="text-primary">My Salon</span>
-      </h2>
+      <h2 className="text-lg font-medium">Sign In</h2>
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
